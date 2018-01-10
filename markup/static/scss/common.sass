@@ -52,13 +52,31 @@ b, strong
 p
 	margin: 0
 
+.page_aside
+	display: inline-block
+	max-width: 316px
+	width: 17%
+	position: fixed
+	top: 0
+	bottom: 0
+	height: 100%
+	background: #3B9FB9 url('../img/content/aside.jpg') 0 0 no-repeat
+	background-size: contain
+	z-index: 10
+	+r(900)
+		display: none
+
 
 .page__wrapper
-	width: 90%
-	max-width: 1988px
+	// width: 83%
+	// max-width: 1988px
 	margin: 0 auto
 	text-align: center
-	padding: 64px 0 0
+	padding: 64px 5% 0 calc(316px + 5%)
+	+r(1670)
+		padding: 40px 5% 0 23%
+	+r(900)
+		padding: 20px
 
 .title
 	&__main
@@ -70,19 +88,29 @@ p
 		color: #fff
 		font-size: 50px
 		line-height: 2em
+		margin-bottom: .8em
 		+gm
 		font-weight: normal
+		+r(1670)
+			font-size: 42px
+			line-height: 1.1
+			padding: 5px 20px
 	&__subtitle
 		font-size: 48px
 		font-weight: normal
 		color: $green
+		margin-bottom: .8em
 		+gr
 		font-weight: normal
+		+r(1670)
+			font-size: 40px
 	&__big
 		font-size: 48px
 		color: $green
 		+gr
 		font-weight: normal
+		+r(1670)
+			font-size: 40px
 
 .btn
 	display: inline-block
@@ -99,11 +127,39 @@ p
 	margin: 60px auto 0
 	border: none
 	outline: none
+	+r(1670)
+		padding: 36px 0
+	+r(1050)
+		padding: 20px 0
 	&_good
 		+gb
+	&_restart
+		width: 100%
+		max-width: 700px
+		background-color: $green
+		margin: 120px 0 0
+		font-size: 30px
+		padding-left: 15px
+		padding-right: 15px
+		line-height: 1.1
+		+gb
+		+r(1920)
+			font-size: 26px
+		+r(1670)
+			margin-top: 60px
+			font-size: 24px
+		+r(1050)
+			margin-top: 30px
+			font-size: 18px
 
 .nav
 	margin: 100px 0 125px
+	+r(1670)
+		margin: 70px 0 70px
+	+r(1220)
+		margin: 50px 0
+	+r(900)
+		margin: 30px 0
 	&__list
 		display: flex
 		justify-content: space-between
@@ -119,6 +175,8 @@ p
 		text-align: center
 		padding-bottom: 25px
 		border-bottom: 15px solid $gray
+		+r(1220)
+			width: calc(100% / 6 - 10px)
 		&.is-active
 			color: $green
 			border-color: $green
@@ -139,6 +197,9 @@ p
 		height: 116px
 		margin: 0 auto 20px
 		text-align: center
+		+r(1670)
+			height: 80px
+			margin: 0 auto 10px
 	&__img
 		display: inline-block
 		vertical-align: top
@@ -147,25 +208,44 @@ p
 		fill: $gray
 
 	&__etap
+		display: inline-block
 		text-transform: uppercase
 		font-size: 30px
 		color: $gray
 		+gr
 		font-weight: normal
+		+r(1670)
+			font-size: 22px
+			margin-bottom: 5px
+		+r(1020)
+			font-size: 18px
+		&_result
+			+r(1200)
+				font-size: 18px
+			+r(1020)
+				font-size: 16px
 	&__desc
 		font-size: 28px
 		color: $gray
 		+gl
+		+r(1670)
+			font-size: 20px
 
 .layout
+	width: 100%
+	max-width: 2000px
 	text-align: left
 
 .test
-	// display: none
+	display: none
+	margin-bottom: 30px
 	&.is-active
+		display: block
 	&__wrap
 		display: flex
 		justify-content: space-between
+		+r(900)
+			flex-wrap: wrap
 		&.in-center
 			display: block
 			text-align: center
@@ -176,17 +256,28 @@ p
 		font-size: 0
 		background-color: #ECECEC
 		text-align: center
+		+r(900)
+			width: 100%
+			margin-bottom: 20px
+			height: 240px
 	&__img
 		+vcenter
 		max-width: 100%
 		max-height: 100%
 	&__content
 		width: 44%
+		+r(900)
+			width: 100%
+			text-align: center
 	&__title
 		font-size: 48px
 		line-height: 1.2
 		color: $green
 		+try(-.2em)
+		+r(1670)
+			font-size: 40px
+		+r(1050)
+			font-size: 32px
 		&.in-center
 			text-align: center
 	&__center
@@ -218,12 +309,19 @@ p
 	display: block
 	margin-bottom: 16px
 	height: 58px
+	+r(1670)
+		height: 42px
+	+r(1050)
+		height: 30px
+	+r(900)
+		text-align: left
 	input
 		position: absolute
 		top: 2px
 		left: 0
 		z-index: 2
 		opacity: 0
+
 		&:checked
 			~ span
 				user-select: none
@@ -240,21 +338,34 @@ p
 					background-color: $green
 					border-radius: 100%
 					transform: translate(-50%, -50%)
+					+r(1670)
+						width: 24px
+						height: 24px
+					+r(1050)
+						width: 16px
+						height: 16px
 		&:disabled
 			~ span
 				opacity: 1
 	span
 		position: relative
-		padding: 10px 0 10px 88px
+		padding: 6px 0 10px 88px
 		// padding-left: 88px
 		left: 0
 		top: 0
 		font-size: 36px
+		line-height: 1.2
 		color: $gray
 		cursor: pointer
 		user-select: none
 		+gr
 		z-index: 15
+		+r(1670)
+			padding-left: 70px
+			padding-top: 10px
+		+r(1050)
+			padding-left: 54px
+			padding-top: 16px
 		&:before
 			content: ""
 			position: absolute
@@ -267,7 +378,20 @@ p
 			cursor: pointer
 			border-radius: 100%
 			+tr(.4s)
-
+			+r(1670)
+				top: 7px
+				left: 7px
+				height: 42px
+				width: 42px
+			+r(1050)
+				top: 13px
+				left: 13px
+				height: 30px
+				width: 30px
+		+r(1670)
+			font-size: 28px
+		+r(1050)
+			font-size: 20px
 
 .time
 	position: relative
@@ -287,10 +411,117 @@ p
 		left: 50%
 		background-color: $gray
 		margin-left: -1px
-	+r(1560)
+
+	+r(1920)
 		font-size: 120px
-	+r(1310)
+	+r(1670)
 		font-size: 100px
-	+r(1155)
+	+r(1505)
 		font-size: 80px
 		padding: 15px 40px
+	+r(1200)
+		font-size: 76px
+		padding: 10px 20px
+
+.result
+	display: none
+	margin-bottom: 30px
+	&.is-active
+		display: block
+	&__pic
+		width: 30%
+		display: inline-block
+		margin-top: 8px
+	&__text
+		width: 67%
+	&__item
+
+	&__title
+		font-size: 48px
+		color: $green
+		+gm
+		+r(1670)
+			font-size: 40px
+		+r(1050)
+			font-size: 32px
+	&__wrap
+		display: flex
+		justify-content: space-between
+	&__desc
+		font-size: 30px
+		+gr
+		+r(1670)
+			font-size: 22px
+		+r(1050)
+			font-size: 16px
+	&__footer
+		width: 100%
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		padding-left: 33%
+		+r(1220)
+			padding-left: 0
+		+r(650)
+			flex-wrap: wrap
+	.title__subtitle
+		padding-left: 33%
+
+.share
+	width: 270px
+	min-width: 270px
+	margin-left: 40px
+	+r(1670)
+		width: 212px
+		min-width: 212px
+		margin-left: 30px
+	+r(650)
+		margin: 20px 0 0
+
+.share,
+.ya-share2,
+.ya-share2__container
+	display: inline-block
+	vertical-align: top
+
+.ya-share2__container
+	.ya-share2__item
+		position: relative
+		display: inline-block
+		width: 74px
+		height: 74px
+		vertical-align: top
+		margin: 0 0 0 24px !important
+		border-radius: 100%
+		box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.12)
+		&:first-of-type
+			margin-left: 0 !important
+		+r(1670)
+			width: 60px
+			height: 60px
+			margin: 0 0 0 16px !important
+
+	.ya-share2__link,
+	.ya-share2__badge
+		display: block
+		margin: 0
+		padding: 0
+		width: 100%
+		height: 100%
+		border-radius: 100%
+		&:hover
+			opacity: .8
+
+		.ya-share2__icon
+			+vcenter
+			display: inline-block
+			width: 70%
+			height: 70%
+			vertical-align: top
+
+	.ya-share2__item_service_vkontakte .ya-share2__badge
+		background-color: #6996C7
+	.ya-share2__item_service_facebook .ya-share2__badge
+		background-color: #496194
+	.ya-share2__item_service_odnoklassniki .ya-share2__badge
+		background-color: #FF9C43
