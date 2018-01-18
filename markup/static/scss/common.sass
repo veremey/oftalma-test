@@ -54,16 +54,18 @@ p
 
 .page_aside
 	display: inline-block
-	max-width: 316px
+	max-width: 170px
 	width: 17%
 	position: fixed
 	top: 0
 	bottom: 0
 	height: 100%
 	background: #3B9FB9 url('../img/content/aside.jpg') 0 0 no-repeat
-	background-size: contain
+	background-size: cover
 	z-index: 10
 	+r(900)
+		display: none
+	+r(640)
 		display: none
 
 
@@ -72,9 +74,9 @@ p
 	// max-width: 1988px
 	margin: 0 auto
 	text-align: center
-	padding: 64px 5% 0 calc(316px + 5%)
-	+r(1670)
-		padding: 40px 5% 0 23%
+	padding: 40px 5% 0 210px
+	// padding: 64px 5% 0 calc(316px + 5%)
+	// +r(1670)
 	+r(900)
 		padding: 20px
 
@@ -93,8 +95,9 @@ p
 		font-weight: normal
 		+r(1670)
 			font-size: 42px
-			line-height: 1.1
-			padding: 5px 20px
+		+r(1015)
+			line-height: 1
+			padding: .5em 1em
 	&__subtitle
 		font-size: 48px
 		font-weight: normal
@@ -402,15 +405,15 @@ p
 	font-size: 150px
 	color: $green
 	+gb
-	&:after
-		content: ''
-		position: absolute
-		top: 10%
-		bottom: 10%
-		width: 2px
-		left: 50%
-		background-color: $gray
-		margin-left: -1px
+	// &:after
+	// 	content: ''
+	// 	position: absolute
+	// 	top: 10%
+	// 	bottom: 10%
+	// 	width: 2px
+	// 	left: 50%
+	// 	background-color: $gray
+	// 	margin-left: -1px
 
 	+r(1920)
 		font-size: 120px
@@ -422,6 +425,14 @@ p
 	+r(1200)
 		font-size: 76px
 		padding: 10px 20px
+
+.separator
+	display: inline-block
+	width: 2px
+	height: 70px
+	+try(8px)
+	background-color: $gray
+	margin-left: -1px
 
 .result
 	display: none

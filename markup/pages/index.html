@@ -294,22 +294,23 @@
 						<div class="test__pic desktop_pic">
 							<img class="test__img" src="static/img/content/img-01.jpg" alt="test pict">
 						</div>
-						<form action="/" method="post" class="test__content">
+						<div class="test__content">
 							<h6 class="test__title">Как быстро вы сможете найти  на этой картинке панду?</h6>
 							<div class="test__pic mobile_pic">
 								<img class="test__img" src="static/img/content/img-01.jpg" alt="test pict">
 							</div>
 
 							<div class="test__time">
-								<div class="time">
+								<div class="time" id="basicUsage">
 									<span class="time__min">00</span>
-									<span class="time__sec">03</span>
+									<span class="separator"></span>
+									<span class="time__sec">00</span>
 								</div>
 								<div class="test__center">
-									<button class="btn btn_next">Далее</button>
+									<button class="btn btn_next" data-nav="nav_2">Далее</button>
 								</div>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 				<!-- #2 -->
@@ -318,7 +319,7 @@
 						<div class="test__pic">
 							<img class="test__img" src="static/img/content/pic-01.png" alt="test pict">
 						</div>
-						<form action="/" method="post" class="test__content">
+						<div class="test__content">
 							<h6 class="test__title">Кто на картинке?</h6>
 							<fieldset class="fieldset">
 								<label class="check">
@@ -340,9 +341,9 @@
 							</fieldset>
 
 							<div class="test__center">
-								<button class="btn btn_next">Далее</button>
+								<button class="btn btn_next" data-nav="nav_3" >Далее</button>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 				<!-- #3 -->
@@ -352,7 +353,7 @@
 						<div class="test__pic">
 							<img class="test__img" src="static/img/content/img-02.jpg" alt="test pict">
 						</div>
-						<form action="/" method="post" class="test__content">
+						<div class="test__content">
 							<h6 class="test__title">Различаются ли отмеченные цвета?</h6>
 							<fieldset class="fieldset">
 								<label class="check">
@@ -370,9 +371,9 @@
 							</fieldset>
 
 							<div class="test__center">
-								<button class="btn btn_next">Далее</button>
+								<button class="btn btn_next"  data-nav="nav_4" >Далее</button>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 				<!-- #4 -->
@@ -382,19 +383,20 @@
 						<div class="test__pic">
 							<img class="test__img" src="static/img/content/img-03.jpg" alt="test pict">
 						</div>
-						<form action="/" method="post" class="test__content">
+						<div class="test__content">
 							<h6 class="test__title">А теперь попробуем что посложнее. Где на фото спрятался кот?</h6>
 
 							<div class="test__time">
 								<div class="time">
 									<span class="time__min">00</span>
-									<span class="time__sec">03</span>
+									<span class="separator"></span>
+									<span class="time__sec">00</span>
 								</div>
 								<div class="test__center">
-									<button class="btn btn_next">Далее</button>
+									<button class="btn btn_next"  data-nav="nav_5" >Далее</button>
 								</div>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 				<!-- #5 -->
@@ -428,7 +430,7 @@
 							<h6 class="title__big in-center">ВНИМАНИЕ!</h6>
 							<h6 class="test__title in-center">Если вы носите очки, снимите их</h6>
 							<div class="test__center">
-								<button class="btn btn_good">хорошо</button>
+								<button class="btn btn_next btn_good">хорошо</button>
 							</div>
 						</div>
 
@@ -441,7 +443,7 @@
 						<div class="test__pic">
 							<img class="test__img" src="static/img/content/img-04.jpg" alt="test pict">
 						</div>
-						<form action="/" method="post" class="test__content">
+						<div class="test__content">
 							<h6 class="test__title">А кто на этой?</h6>
 							<fieldset class="fieldset">
 								<label class="check">
@@ -455,9 +457,9 @@
 							</fieldset>
 
 							<div class="test__center">
-								<button class="btn btn_next">финиш</button>
+								<button class="btn btn_next btn_finish"  data-nav="nav_6">финиш</button>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 				<!-- results -->
@@ -475,7 +477,7 @@
 							</div>
 						</div>
 						<div class="result__footer">
-							<button class="btn btn_restart"> пройти тест заново</button>
+							<button class="btn btn_restart"  data-nav="nav_1"> пройти тест заново</button>
 							<div class="share">
 								<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki"></div>
 							</div>
@@ -496,7 +498,7 @@
 							</div>
 						</div>
 						<div class="result__footer">
-							<button class="btn btn_restart"> пройти тест заново</button>
+							<button class="btn btn_restart"  data-nav="nav_1"> пройти тест заново</button>
 							<div class="share">
 								<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki"></div>
 							</div>
@@ -517,7 +519,7 @@
 							</div>
 						</div>
 						<div class="result__footer">
-							<button class="btn btn_restart"> пройти тест заново</button>
+							<button class="btn btn_restart"  data-nav="nav_1"> пройти тест заново</button>
 							<div class="share">
 								<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki"></div>
 							</div>
@@ -538,7 +540,7 @@
 							</div>
 						</div>
 						<div class="result__footer">
-							<button class="btn btn_restart"> пройти тест заново</button>
+							<button class="btn btn_restart"  data-nav="nav_1"> пройти тест заново</button>
 							<div class="share">
 								<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki"></div>
 							</div>
@@ -559,7 +561,7 @@
 							</div>
 						</div>
 						<div class="result__footer">
-							<button class="btn btn_restart"> пройти тест заново</button>
+							<button class="btn btn_restart"  data-nav="nav_1"> пройти тест заново</button>
 							<div class="share">
 								<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki"></div>
 							</div>
@@ -580,7 +582,7 @@
 							</div>
 						</div>
 						<div class="result__footer">
-							<button class="btn btn_restart"> пройти тест заново</button>
+							<button class="btn btn_restart"  data-nav="nav_1"> пройти тест заново</button>
 							<div class="share">
 								<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki"></div>
 							</div>
@@ -601,7 +603,7 @@
 							</div>
 						</div>
 						<div class="result__footer">
-							<button class="btn btn_restart"> пройти тест заново</button>
+							<button class="btn btn_restart"  data-nav="nav_1"> пройти тест заново</button>
 							<div class="share">
 								<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki"></div>
 							</div>

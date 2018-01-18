@@ -1,10 +1,3 @@
-'head': {
-    defaults: {
-        title: 'фан-тест',
-        useSocialMetaTags: false
-    }
-},
-
 /* Module data structure */
 
 // moduleName: {
@@ -20,6 +13,13 @@ _template: {
         title: 'Hello world',
         age: 10,
         button: false
+    }
+},
+
+'head': {
+    defaults: {
+        title: 'фан-тест',
+        useSocialMetaTags: false
     }
 },
 
