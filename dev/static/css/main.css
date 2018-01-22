@@ -445,6 +445,12 @@ body {
   font-family: 'GothaProReg', Arial, sans-serif;
 }
 
+@media only screen and (max-width: 1030px) {
+  body {
+    background-color: #FFF;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -526,6 +532,7 @@ p {
   }
 }
 
+.page__blocker,
 .page__wrapper {
   margin: 0 auto;
   text-align: center;
@@ -533,8 +540,25 @@ p {
 }
 
 @media only screen and (max-width: 900px) {
+  .page__blocker,
   .page__wrapper {
     padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .page__wrapper {
+    display: none;
+  }
+}
+
+.page__blocker {
+  display: none;
+}
+
+@media only screen and (max-width: 1030px) {
+  .page__blocker {
+    display: block;
   }
 }
 
@@ -591,6 +615,14 @@ p {
   .title__big {
     font-size: 40px;
   }
+}
+
+.title__blocker {
+  color: #3B9FB9;
+  text-align: center;
+  padding: 80px 40px;
+  font-size: 32px;
+  background-color: #FFF;
 }
 
 .btn {

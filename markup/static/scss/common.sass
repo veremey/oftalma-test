@@ -12,6 +12,8 @@ body
 	color: $text
 	background-color: $body
 	+gr
+	+r(1030)
+		background-color: #FFF
 
 *
 	box-sizing: border-box
@@ -68,17 +70,22 @@ p
 	+r(640)
 		display: none
 
-
+.page__blocker,
 .page__wrapper
-	// width: 83%
-	// max-width: 1988px
 	margin: 0 auto
 	text-align: center
 	padding: 40px 5% 0 210px
-	// padding: 64px 5% 0 calc(316px + 5%)
-	// +r(1670)
 	+r(900)
 		padding: 20px
+
+.page__wrapper
+	+r(1030)
+		display: none
+.page__blocker
+	display: none
+	+r(1030)
+		display: block
+
 
 .title
 	&__main
@@ -114,6 +121,12 @@ p
 		font-weight: normal
 		+r(1670)
 			font-size: 40px
+	&__blocker
+		color: #3B9FB9
+		text-align: center
+		padding: 80px 40px
+		font-size: 32px
+		background-color: #FFF
 
 .btn
 	display: inline-block
