@@ -539,6 +539,11 @@ p {
   padding: 40px 5% 0 210px;
 }
 
+.page__blocker.no-top-offset,
+.page__wrapper.no-top-offset {
+  padding-top: 0;
+}
+
 @media only screen and (max-width: 900px) {
   .page__blocker,
   .page__wrapper {
@@ -560,6 +565,23 @@ p {
   .page__blocker {
     display: block;
   }
+}
+
+.startscreen {
+  width: 100%;
+}
+
+.startscreen__pic {
+  font-size: 0;
+}
+
+.startscreen__img {
+  width: 100%;
+}
+
+.startscreen + .title__main {
+  position: relative;
+  margin-top: -50%;
 }
 
 .title__main {
@@ -586,6 +608,16 @@ p {
   .title__main {
     line-height: 1;
     padding: .5em 1em;
+  }
+}
+
+.title__main.same-width {
+  width: 876px;
+}
+
+@media only screen and (max-width: 1670px) {
+  .title__main.same-width {
+    width: 737px;
   }
 }
 
@@ -835,6 +867,11 @@ p {
   text-align: left;
 }
 
+.simple_pic {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .test {
   display: none;
   margin-bottom: 30px;
@@ -872,6 +909,8 @@ p {
   font-size: 0;
   background-color: #ECECEC;
   text-align: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 @media only screen and (max-width: 900px) {
@@ -893,6 +932,13 @@ p {
 }
 
 .test__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 44%;
 }
 
@@ -927,8 +973,16 @@ p {
   text-align: center;
 }
 
+.test__time {
+  text-align: center;
+}
+
 .test__center {
   text-align: center;
+}
+
+.test__center.mod_top {
+  margin-top: auto;
 }
 
 .test__answer {
@@ -1145,11 +1199,23 @@ p {
 .separator {
   display: inline-block;
   width: 2px;
-  height: 70px;
+  height: 117px;
   -webkit-transform: translateY(8px);
           transform: translateY(8px);
   background-color: #7F7F7F;
   margin-left: -1px;
+}
+
+@media only screen and (max-width: 1920px) {
+  .separator {
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 1670px) {
+  .separator {
+    height: 70px;
+  }
 }
 
 .result {

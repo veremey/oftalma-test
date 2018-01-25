@@ -75,6 +75,8 @@ p
 	margin: 0 auto
 	text-align: center
 	padding: 40px 5% 0 210px
+	&.no-top-offset
+		padding-top: 0
 	+r(900)
 		padding: 20px
 
@@ -86,6 +88,16 @@ p
 	+r(1030)
 		display: block
 
+.startscreen
+	width: 100%
+	&__pic
+		font-size: 0
+	&__img
+		width: 100%
+	+ .title__main
+		position: relative
+		margin-top: -50%
+		// transform: translateY(-50%)
 
 .title
 	&__main
@@ -105,6 +117,11 @@ p
 		+r(1015)
 			line-height: 1
 			padding: .5em 1em
+		&.same-width
+			width: 876px
+			+r(1670)
+				width: 737px
+
 	&__subtitle
 		font-size: 48px
 		font-weight: normal
@@ -252,6 +269,10 @@ p
 	max-width: 2000px
 	text-align: left
 
+.simple_pic
+	max-width: 100%
+	max-height: 100%
+
 .test
 	display: none
 	margin-bottom: 30px
@@ -260,6 +281,8 @@ p
 	&__wrap
 		display: flex
 		justify-content: space-between
+
+		// align-items: flex-start
 		+r(900)
 			flex-wrap: wrap
 		&.in-center
@@ -272,6 +295,7 @@ p
 		font-size: 0
 		background-color: #ECECEC
 		text-align: center
+		align-self: flex-start
 		+r(900)
 			width: 100%
 			margin-bottom: 20px
@@ -281,6 +305,9 @@ p
 		max-width: 100%
 		max-height: 100%
 	&__content
+		display: flex
+		flex-direction: column
+		// height: 580px
 		width: 44%
 		+r(900)
 			width: 100%
@@ -296,8 +323,12 @@ p
 			font-size: 32px
 		&.in-center
 			text-align: center
+	&__time
+		text-align: center
 	&__center
 		text-align: center
+		&.mod_top
+			margin-top: auto
 	&__answer
 		font-size: 36px
 		color: $gray
@@ -442,10 +473,14 @@ p
 .separator
 	display: inline-block
 	width: 2px
-	height: 70px
+	height: 117px
 	+try(8px)
 	background-color: $gray
 	margin-left: -1px
+	+r(1920)
+		height: 90px
+	+r(1670)
+		height: 70px
 
 .result
 	display: none

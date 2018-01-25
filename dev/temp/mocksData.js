@@ -1,3 +1,10 @@
+'head': {
+    defaults: {
+        title: 'фан-тест',
+        useSocialMetaTags: false
+    }
+},
+
 /* Module data structure */
 
 // moduleName: {
@@ -16,14 +23,10 @@ _template: {
     }
 },
 
-'head': {
-    defaults: {
-        title: 'фан-тест',
-        useSocialMetaTags: false
-    }
-},
-
 __pages: [{
                 name: 'index',
                 href: 'index.html'
+             },{
+                name: 'test',
+                href: 'test.html'
              }]
